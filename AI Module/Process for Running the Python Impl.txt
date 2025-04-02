@@ -1,0 +1,63 @@
+**Process for Running the Python Implementation in Virtual Environment**
+
+### **1. Setting Up and Activating the Virtual Environment**
+
+#### **If the virtual environment is not created yet:**
+Open **PowerShell** and navigate to your project folder:
+```powershell
+cd "C:\Users\Purav Shah\OneDrive\Desktop\Project"
+```
+
+#### **To activate the virtual environment (PowerShell):**
+```powershell
+.\env\Scripts\Activate
+```
+If you get a script execution error, temporarily allow scripts to run:
+```powershell
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+```
+Then activate again:
+```powershell
+.\env\Scripts\Activate
+```
+
+#### **To activate the virtual environment in VS Code terminal:**
+If using VS Code, open the terminal and run:
+```powershell
+& "C:/Users/Purav Shah/OneDrive/Desktop/Project/env/Scripts/Activate.ps1"
+```
+
+### **2. Installing Dependencies**
+Once the virtual environment is activated, install the required Python packages:
+```powershell
+pip install -r requirements.txt
+```
+If `urllib3` causes issues, install the correct version manually:
+```powershell
+pip install "urllib3<2"
+```
+
+### **3. Running the Python Script**
+Run your script using:
+```powershell
+python -u "c:/Users/Purav Shah/OneDrive/Desktop/Project/env/PYthon_predictions/fetch_data.py"
+```
+
+### **4. Deactivating the Virtual Environment**
+After running your script, deactivate the virtual environment:
+```powershell
+deactivate
+```
+
+### **5. Resetting Execution Policy (if changed earlier)**
+If you previously changed the execution policy, reset it:
+```powershell
+Set-ExecutionPolicy Restricted -Scope CurrentUser
+```
+
+---
+
+This file serves as a step-by-step guide for running your Python script within a virtual environment in **PowerShell** and **VS Code Terminal**.
+
+Follow these instructions each time you need to set up and run your implementation. 🚀
+
